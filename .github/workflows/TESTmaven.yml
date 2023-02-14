@@ -33,4 +33,4 @@ jobs:
       - name: Install Chrome browser
         run: sudo apt-get install -y google-chrome-stable
       - name: Run Maven tests in headed mode for Chrome browser
-        run: mvn -f pom.xml -Dheadless=false -Dbrowser=chrome test
+        run: mvn clean test -Dheadless=false -Dbrowser=chrome test

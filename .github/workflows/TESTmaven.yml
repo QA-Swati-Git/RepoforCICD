@@ -31,4 +31,4 @@ jobs:
       - name: Install Playwright
         run: mvn -f pom.xml exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
       - name: Run tests
-        run: mvn -f pom.xml test -Dtest=testng_regression.xml -DargLine="-Dplaywright.browsers=chromium" -e -Dheadless=false
+        run: mvn -f pom.xml test -DargLine="-Dplaywright.browsers=chromium" -e -Dheadless=false

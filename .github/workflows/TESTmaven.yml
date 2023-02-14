@@ -30,5 +30,7 @@ jobs:
         run: mvn -B -f pom.xml install -D skipTests --no-transfer-progress
       - name: Install Playwright
         run: mvn -f pom.xml exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
-      - name: Run tests
-        run: mvn -f pom.xml test -DargLine="-Dplaywright.browsers=chromium" -e -Dheadless=false
+      - name: Install Chrome browser
+        run: sudo apt-get install -y google-chrome-stable
+      - name: Run Maven tests in headed mode for Chrome browser
+        run: mvn -Dheadless=false -Dbrowser=chrome test

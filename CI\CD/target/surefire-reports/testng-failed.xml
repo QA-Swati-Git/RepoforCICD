@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [BDO_Web_Regression_suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="BDO_Homepage_Testcase(failed)" verbose="0">
+    <classes>
+      <class name="com.qa.BDO.Test.BDO_Home_Testcases">
+        <methods>
+          <include name="ValidateHomePageElements"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qa.BDO.Test.BDO_Home_Testcases -->
+    </classes>
+  </test> <!-- BDO_Homepage_Testcase(failed) -->
+  <test thread-count="5" name="BDO_Login_Testcase(failed)" verbose="0">
+    <classes>
+      <class name="com.qa.BDO.Test.BDO_Login_Testcases">
+        <methods>
+          <include name="tearDown"/>
+          <include name="VaildateSuccessfullogin"/>
+          <include name="LoginAttemptExhausted"/>
+          <include name="setup"/>
+          <include name="VerifyLoginCredentials" invocation-numbers="0 1 2 3 4"/>
+        </methods>
+      </class> <!-- com.qa.BDO.Test.BDO_Login_Testcases -->
+    </classes>
+  </test> <!-- BDO_Login_Testcase(failed) -->
+  <test thread-count="5" name="BDO_MyAccountSummary_Testcase(failed)" verbose="0">
+    <classes>
+      <class name="com.qa.BDO.Test.BDO_AccountSummary_Testcases">
+        <methods>
+          <include name="NavigateToUpdateProfilePage"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qa.BDO.Test.BDO_AccountSummary_Testcases -->
+    </classes>
+  </test> <!-- BDO_MyAccountSummary_Testcase(failed) -->
+  <test thread-count="5" name="BDO_ManageProfile_Testcase(failed)" verbose="0">
+    <classes>
+      <class name="com.qa.BDO.Test.BDO_ManageProfile_Testcases">
+        <methods>
+          <include name="Verify_Cancel_UpdateMobile"/>
+          <include name="NavigateToManageProfile"/>
+          <include name="tearDown"/>
+          <include name="Verify_function_of_Cancel_pop"/>
+          <include name="setup"/>
+          <include name="Verify_Cancel_UpdateEmail"/>
+        </methods>
+      </class> <!-- com.qa.BDO.Test.BDO_ManageProfile_Testcases -->
+    </classes>
+  </test> <!-- BDO_ManageProfile_Testcase(failed) -->
+</suite> <!-- Failed suite [BDO_Web_Regression_suite] -->

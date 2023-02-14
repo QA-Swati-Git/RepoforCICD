@@ -26,11 +26,8 @@ jobs:
         with:
            distribution: 'temurin'
            java-version: '17'
-      - name: Build & Install
-        run: mvn -B -f pom.xml install -D skipTests --no-transfer-progress
-      - name: Install Playwright
-        run: mvn -f pom.xml exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
-      - name: Install Chrome browser
-        run: sudo apt-get install -y google-chrome-stable
-      - name: Run Maven tests in headed mode for Chrome browser
-        run: mvn clean test -Dheadless=false -Dbrowser=chrome test
+      - name: Build project
+        run: mvn -B package --file pom.xml
+
+      - name: Run tests (headed)
+        run: mvn -B test -Dplaywright.browsers=chromium --file pom.xml

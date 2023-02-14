@@ -27,8 +27,8 @@ jobs:
            distribution: 'temurin'
            java-version: '17'
       - name: Build & Install
-        run: mvn -B --file CICD/pom.xml install -D skipTests --no-transfer-progress
+        run: mvn -B -f CI\CD/pom.xml install -D skipTests --no-transfer-progress
       - name: Install Playwright
-        run: mvn --file pom.xml exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
+        run: mvn -f CI\CD/pom.xml exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
       - name: Run tests
-        run: mvn --file CICD/pom.xml test -Dtest=MyTest -DargLine="-Dplaywright.browsers=chromium" -e -Dheadless=false
+        run: mvn -f CI\CD/pom.xml test -Dtest=MyTest -DargLine="-Dplaywright.browsers=chromium" -e -Dheadless=false

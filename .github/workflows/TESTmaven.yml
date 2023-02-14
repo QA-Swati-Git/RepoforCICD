@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: Test web run
 
 on:
    workflow_dispatch:
@@ -29,6 +29,6 @@ jobs:
       - name: Build & Install
         run: mvn --file CICD/pom.xml -B install -D skipTests --no-transfer-progress
       - name: Install Playwright
-        run: mvn --file CICD/pom.xml exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
+        run: mvn --file pom.xml exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
       - name: Run tests
         run: mvn --file CICD/pom.xml test -Dtest=MyTest -DargLine="-Dplaywright.browsers=chromium" -e -Dheadless=false

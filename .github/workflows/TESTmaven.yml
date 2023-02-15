@@ -27,7 +27,6 @@ jobs:
            distribution: 'temurin'
            java-version: '17'
       - name: Build project
-        run: mvn -B package --file pom.xml
+        run: mvn clean install
 
-      - name: Run tests (headed)
-        run: mvn -B test -Dplaywright.browsers=chromium --file pom.xml
+  

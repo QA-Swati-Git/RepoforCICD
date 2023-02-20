@@ -29,7 +29,7 @@ jobs:
       run: mvn dependency:resolve
 
     - name: Run tests and generate Allure report
-      run: mvn clean test
+      run: mvn test
 
 
 

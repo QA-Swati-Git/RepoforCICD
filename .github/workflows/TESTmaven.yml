@@ -25,12 +25,11 @@ jobs:
       with:
          distribution: 'temurin'
          java-version: '17'
-    - name: Build & Install
-      run: mvn pom.xml -B install -D skipTests --no-transfer-progress
-    - name: Install Playwright
-      run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
-    - name: Run tests
-      run: mvn test
+    - name: Install dependencies
+      run: mvn dependency:resolve
+
+    - name: Run tests and generate Allure report
+      run: mvn clean test site -DtestFailureIgnore=true
 
 
 

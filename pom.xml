@@ -39,7 +39,7 @@
                                           <headless>false</headless>
                                           <chromeHeadless>true</chromeHeadless>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/TestRunner/testng_regression.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/Config/testng_regression.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"

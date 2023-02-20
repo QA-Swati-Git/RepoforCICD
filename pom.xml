@@ -12,35 +12,18 @@
 
   <name>BDO_Web_Automation_Test</name>
 	<url>http://maven.apache.org</url>
-	
-	<profiles>
-  <profile>
-    <id>slack-notification</id>
+
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<aspectj.version>1.8.10</aspectj.version>
-      <slack.webhook.url>https://hooks.slack.com/services/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</slack.webhook.url>
 	</properties>
 
 	
 	
     <build>
-      <plugins>
-        <plugin>
-          <groupId>com.squareup.okhttp3</groupId>
-          <artifactId>okhttp</artifactId>
-          <version>4.9.3</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-antrun-plugin</artifactId>
-          <version>3.0.0</version>
-          <executions>
-            <execution>
-              <id>send-slack-notification</id>
-		<plugins>
-			<plugin>
+	<plugins>
+		<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.10.1</version>
@@ -49,7 +32,7 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-
+</plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>

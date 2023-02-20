@@ -45,6 +45,14 @@
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
 				</configuration>
+				<executions>
+        <execution>
+          <id>test</id>
+          <goals>
+            <goal>test</goal>
+          </goals>
+        </execution>
+      </executions>
 				 <dependencies>
                     <dependency>
                         <groupId>org.aspectj</groupId>

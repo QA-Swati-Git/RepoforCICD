@@ -12,15 +12,14 @@
 
   <name>BDO_Web_Automation_Test</name>
 	<url>http://maven.apache.org</url>
+	
+	<profiles>
+  <profile>
+    <id>slack-notification</id>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<aspectj.version>1.8.10</aspectj.version>
-		
-<profiles>
-  <profile>
-    <id>slack-notification</id>
-    <properties>
       <slack.webhook.url>https://hooks.slack.com/services/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</slack.webhook.url>
 	</properties>
 

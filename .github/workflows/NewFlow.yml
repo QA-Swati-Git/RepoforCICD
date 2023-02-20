@@ -34,7 +34,7 @@ jobs:
       uses: browser-actions/setup-chrome@v1
 
     - name: Build with Maven
-      run: mvn clean install
+      run: mvn -B install -D skipTests
 
     - name: Run tests in Chrome
       run: mvn -Dtest=testng_regression.xml -DbrowserName=chromium -Dheaded=true test

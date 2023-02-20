@@ -36,8 +36,8 @@
 				<version>2.20</version>
 				<configuration>
 					<testFailureIgnore>true</testFailureIgnore>
-                                         <headless>false</headless>
-                                         <chromeHeadless>true</chromeHeadless>
+                                          <headless>false</headless>
+                                          <chromeHeadless>true</chromeHeadless>
 					<suiteXmlFiles>
 						<suiteXmlFile>src/test/resources/TestRunner/testng_regression.xml</suiteXmlFile>
 					</suiteXmlFiles>
@@ -68,7 +68,8 @@
 					</execution>
 				</executions>
 			</plugin>
-		
+		</plugins>
+
 
 	</build>
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->

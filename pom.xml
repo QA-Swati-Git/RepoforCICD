@@ -51,6 +51,8 @@
                    <include>**/*Tests.java</include>
                 </includes>
 		   </configuration>
+			  </plugin>
+		    </plugins>
 		   <dependencies>
                    <dependency>
                         <groupId>org.aspectj</groupId>
@@ -58,8 +60,7 @@
                         <version>${aspectj.version}</version>
                   </dependency>
                      </dependencies>
-			       </plugin>
-		    </plugins>
+			     
 	    
                            <plugins>
 			<plugin>
@@ -92,8 +93,7 @@
     </plugin>
   </plugins>
 	</build>
-		      </profile>
-</profiles>
+	
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependencies>
 		<dependency>
